@@ -1,0 +1,9 @@
+@mixin grid($justify: center, $align: center, $jitems: center, $aitems: center, $rows: auto, $cols: auto, $areas: '') {
+    display: grid;
+    justify-content: $justify;
+    align-content: $align;
+    justify-items: $jitems;
+    align-items: $aitems;
+    grid-template: $rows / $cols;
+    grid-template-areas: $areas;
+}

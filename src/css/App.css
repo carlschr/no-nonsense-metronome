@@ -1,1 +1,78 @@
-/* No CSS *//*# sourceMappingURL=App.css.map */
+:root .Grid {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+:root {
+  background: black;
+}
+
+:root .Grid {
+  width: calc(100vw - 10vmin);
+  height: calc(100vh - 10vmin);
+  max-width: 600px;
+  background: #f5edc0;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-rows: 2fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template: 2fr 1fr 1fr/1fr 1fr;
+      grid-template-areas: "click click" "minusone plusone" "half double";
+}
+
+:root .Grid .tempo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: click;
+  height: 100px;
+  width: 200px;
+  text-align: center;
+  background: white;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+:root .Grid .sub {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: minusone;
+}
+
+:root .Grid .add {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: plusone;
+}
+
+:root .Grid .div {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: half;
+}
+
+:root .Grid .mult {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: double;
+}
+
+:root .Grid button {
+  width: 100px;
+  height: 100px;
+}
+/*# sourceMappingURL=App.css.map */

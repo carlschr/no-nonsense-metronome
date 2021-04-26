@@ -1,0 +1,39 @@
+@import './helpers/mixins';
+@import './helpers/placeholders';
+
+:root {
+    background: black;
+    .Grid {
+        width: calc(100vw - 10vmin);
+        height: calc(100vh - 10vmin);
+        max-width: 600px;
+        @extend %absolute-center;
+        background: rgb(245, 237, 192);
+        @include grid(center, center, center, center, (2fr 1fr 1fr), (1fr 1fr), ('click click' 'minusone plusone' 'half double'));
+        .tempo {
+            grid-area: click;
+            height: 100px;
+            width: 200px;
+            text-align: center;
+            background: white;
+            display: grid;
+            place-items: center;
+        }
+        .sub {
+            grid-area: minusone;
+        }
+        .add {
+            grid-area: plusone;
+        }
+        .div {
+            grid-area: half;
+        }
+        .mult {
+            grid-area: double;
+        }
+        button {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
