@@ -20,7 +20,7 @@ function App() {
       return false;
     }
     if (+val <= 0) {
-      setBpm(0.1);
+      setBpm(1);
       return false;
     }
     return true;
@@ -41,13 +41,13 @@ function App() {
     };
   }
 
-  const handleSub = () => {
-    const newBpm = trimNum(+bpm - 1);
+  const handleSub = (num) => {
+    const newBpm = trimNum(+bpm - num);
     if (!checkValue(newBpm)) return;
     setBpm(newBpm);
   }
-  const handleAdd = () => {
-    const newBpm = trimNum(+bpm + 1);
+  const handleAdd = (num) => {
+    const newBpm = trimNum(+bpm + num);
     if (!checkValue(newBpm)) return;
     setBpm(newBpm);
   }
@@ -72,8 +72,10 @@ function App() {
     <div className="App">
       <Grid>
         <Tempo handleChange={handleChange} bpm={bpm}/>
-        <Button className='sub' handleClick={handleSub} content='-1'></Button>
-        <Button className='add' handleClick={handleAdd} content='+1'></Button>
+        <Button className='subOne' handleClick={() => handleSub(1)} content='-1'></Button>
+        <Button className='addOne' handleClick={() => handleAdd(1)} content='+1'></Button>
+        <Button className='subTen' handleClick={() => handleSub(10)} content='-10'></Button>
+        <Button className='addTen' handleClick={() => handleAdd(10)} content='+10'></Button>
         <Button className='div' handleClick={handleDiv} content='/2'></Button>
         <Button className='mult' handleClick={handleMult} content='x2'></Button>
       </Grid>
