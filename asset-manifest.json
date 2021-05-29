@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/no-nonsense-metronome/static/css/main.d9e69ddf.chunk.css",
+    "main.js": "/no-nonsense-metronome/static/js/main.3b497a80.chunk.js",
+    "main.js.map": "/no-nonsense-metronome/static/js/main.3b497a80.chunk.js.map",
+    "runtime-main.js": "/no-nonsense-metronome/static/js/runtime-main.6c794ae1.js",
+    "runtime-main.js.map": "/no-nonsense-metronome/static/js/runtime-main.6c794ae1.js.map",
+    "static/js/2.d2362451.chunk.js": "/no-nonsense-metronome/static/js/2.d2362451.chunk.js",
+    "static/js/2.d2362451.chunk.js.map": "/no-nonsense-metronome/static/js/2.d2362451.chunk.js.map",
+    "static/js/3.6008785f.chunk.js": "/no-nonsense-metronome/static/js/3.6008785f.chunk.js",
+    "static/js/3.6008785f.chunk.js.map": "/no-nonsense-metronome/static/js/3.6008785f.chunk.js.map",
+    "index.html": "/no-nonsense-metronome/index.html",
+    "static/css/main.d9e69ddf.chunk.css.map": "/no-nonsense-metronome/static/css/main.d9e69ddf.chunk.css.map",
+    "static/js/2.d2362451.chunk.js.LICENSE.txt": "/no-nonsense-metronome/static/js/2.d2362451.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6c794ae1.js",
+    "static/js/2.d2362451.chunk.js",
+    "static/css/main.d9e69ddf.chunk.css",
+    "static/js/main.3b497a80.chunk.js"
+  ]
+}
