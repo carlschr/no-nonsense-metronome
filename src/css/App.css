@@ -33,7 +33,7 @@
   -ms-grid-rows: 3fr 2fr 2fr 2fr 2fr;
   -ms-grid-columns: 1fr 1fr;
       grid-template: 3fr 2fr 2fr 2fr 2fr/1fr 1fr;
-      grid-template-areas: "click click" "play stop" "minusone plusone" "minusten plusten" "half double";
+      grid-template-areas: "click click" "toggle toggle" "minusone plusone" "minusten plusten" "half double";
 }
 
 :root .Grid .tempo {
@@ -49,18 +49,13 @@
   display: grid;
   place-items: center;
   font-size: 48px;
+  padding: 0;
 }
 
-:root .Grid .play {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: play;
-}
-
-:root .Grid .stop {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: stop;
+:root .Grid button {
+  width: 200px;
+  height: 100px;
+  font-size: 36px;
 }
 
 :root .Grid .subOne {
@@ -99,10 +94,14 @@
   grid-area: double;
 }
 
-:root .Grid button {
+:root .Grid .toggle {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: toggle;
   width: 200px;
   height: 100px;
-  font-size: 36px;
+  margin: 0;
 }
 
 @media only screen and (max-width: 500px) {
