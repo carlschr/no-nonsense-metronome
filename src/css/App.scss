@@ -11,7 +11,7 @@
         padding-bottom: 32px;
         @extend %absolute-center;
         background: rgb(245, 237, 192);
-        @include grid(center, center, center, center, (3fr 2fr 2fr 2fr), (1fr 1fr), ('click click' 'minusone plusone' 'minusten plusten' 'half double'));
+        @include grid(center, center, center, center, (3fr 2fr 2fr 2fr 2fr), (1fr 1fr), ('click click' 'play stop' 'minusone plusone' 'minusten plusten' 'half double'));
         .tempo {
             grid-area: click;
             height: 100px;
@@ -21,6 +21,12 @@
             display: grid;
             place-items: center;
             font-size: 48px;
+        }
+        .play {
+            grid-area: play;
+        }
+        .stop {
+            grid-area: stop;
         }
         .subOne {
             grid-area: minusone;

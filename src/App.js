@@ -6,9 +6,14 @@ import {useState, useEffect} from 'react';
 
 function App() {
   const [bpm, setBpm] = useState(120);
+  const [on, setOn] = useState(false);
+
   useEffect(() => {
     console.log(bpm);
   }, [bpm])
+  useEffect(() => {
+    console.log(on);
+  }, [on])
 
   const checkValue = val => {
     if (!val) {
@@ -67,11 +72,20 @@ function App() {
     const newBpm = trimNum(+e.target.value);
     setBpm(newBpm);
   }
+  
+  const handlePlay = () => {
+      setOn(true);
+  }
+  const handleStop = () => {
+      setOn(false);
+  }
 
   return (
     <div className="App">
       <Grid>
         <Tempo handleChange={handleChange} bpm={bpm}/>
+        <Button className='play' handleClick={handlePlay} content='Play'/>
+        <Button className='stop' handleClick={handleStop} content='Stop'/>
         <Button className='subOne' handleClick={() => handleSub(1)} content='-1'></Button>
         <Button className='addOne' handleClick={() => handleAdd(1)} content='+1'></Button>
         <Button className='subTen' handleClick={() => handleSub(10)} content='-10'></Button>

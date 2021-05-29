@@ -30,10 +30,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-rows: 3fr 2fr 2fr 2fr;
+  -ms-grid-rows: 3fr 2fr 2fr 2fr 2fr;
   -ms-grid-columns: 1fr 1fr;
-      grid-template: 3fr 2fr 2fr 2fr/1fr 1fr;
-      grid-template-areas: "click click" "minusone plusone" "minusten plusten" "half double";
+      grid-template: 3fr 2fr 2fr 2fr 2fr/1fr 1fr;
+      grid-template-areas: "click click" "play stop" "minusone plusone" "minusten plusten" "half double";
 }
 
 :root .Grid .tempo {
@@ -51,38 +51,50 @@
   font-size: 48px;
 }
 
-:root .Grid .subOne {
+:root .Grid .play {
   -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: play;
+}
+
+:root .Grid .stop {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: stop;
+}
+
+:root .Grid .subOne {
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: minusone;
 }
 
 :root .Grid .addOne {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: plusone;
 }
 
 :root .Grid .subTen {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: minusten;
 }
 
 :root .Grid .addTen {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 2;
   grid-area: plusten;
 }
 
 :root .Grid .div {
-  -ms-grid-row: 4;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: half;
 }
 
 :root .Grid .mult {
-  -ms-grid-row: 4;
+  -ms-grid-row: 5;
   -ms-grid-column: 2;
   grid-area: double;
 }
